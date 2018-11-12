@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .view{
+            width:1210px;
+            height:200px;
+            padding:0 5px;
+            margin:0 auto;
+            margin-top:10px;
+            background:red;
+        }
+        .product{
+            height:329px;
+            width:220px;
+            position:relative;
+            float:left;
+            padding:0;
+            margin:0 0 20px;
+            line-height:1.5;
+            overflow:visible;
+            background:blue;
+        }
+        .product-iWap{
+            min-width:98%;
+            width:210px;
+            height:220px;
+            position:relative;
+            background:aqua;
+            margin:0;
+            padding:4px 4px 0;
+            font-size:12px;
+            border:1px solid red;
+            border-radius:3px;
+        }
+        .productImg-wrap{
+            position:relative;
+            display:table;
+            table-layout:fixed;
+            height:210px;
+            width:100%;
+            padding:0;
+            margin:0 0 5px;
+        }
+        .productImg-wrap a{
+            max-width:100%;
+            max-height:210px;
+            display:table-cell;
+            width:100%;
+            text-align:center;
+        }
+        .productImg-wrap a img {
+            margin:0 auto;
+        }
+        .productPrice{
+            font-family:arial,verdana,sans-serif!important;
+            color:#ff0036;
+            font-size:14px;
+            height:30px;
+            line-height:30px;
+            margin:0 0 5px;
+            letter-spacing:normal;
+            overflow:inherit!important;
+            white-space:nowrap;
+        }
+        .productPrice em{
+            float:left;
+            font-family:arial;
+            font-weight:400;
+            font-size:20px;
+            color:#ff0036;
+        }
+        .productPrice em b{
+            margin-right:2px;
+            font-weight:700;
+            font-size:14px;
+        }
+        .productTitle{
+            display:block;
+            color:#666;
+            height:34px!important;
+            max-height:32px;
+            line-height:12px;
+            margin-bottom:3px;
+            word-break:break-all;
+            /*font-size:12px;*/
+            position:relative;
+        }
+        .productTitle a{
+            color:#333;
+        }
+        .productStatus span{
+            float:left;
+            display:inline-block;
+            border-right:1px solid #eee;
+            width:30%;
+            padding:10px 1px;
+            margin-right:6px;
+            line-height:12px;
+            text-align:left;
+            white-space:nowrap;
+
+        }
+    </style>
+</head>
+<body>
+<div class="view">
+    <div class="product">
+        <div class="product-iWap">
+            <div class="productImg-wrap">
+                <a href="#"><img src="" /></a>
+            </div>
+        </div>
+        <p class="productPrice">
+            <em title="2799.00">
+                <b>￥</b>2799.00
+            </em>
+        </p>
+        <div class="productTitle">
+            <a href="#">小米8</a>
+        </div>
+        <p class="productStatus">
+            <span>该款月成交<em>4.9万笔</em></span>
+        </p>
+    </div>
+    <div class="product">
+        <div class="product-iWap">
+            <div class="productImg-wrap">
+                <a href="#"><img src="" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <div class="product-iWap">
+            <div class="productImg-wrap">
+                <a href="#"><img src="" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <div class="product-iWap">
+            <div class="productImg-wrap">
+                <a href="#"><img src="" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

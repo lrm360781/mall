@@ -1,0 +1,102 @@
+.product{
+    overflow:hidden;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.f1{
+    overflow: hidden;
+    width: 98%;
+    margin: 10px auto;
+    border:1px solid black;
+    height: 434px;
+}
+
+.f11{
+    float: left;
+    margin: 10px;
+    width: 530px;
+    height: 410px;
+}
+
+.f1Left img{
+    width: 528px;
+    height: 390px;
+}
+
+.f12{
+    margin: 10px;
+    width: 510px;
+}
+.zt p{
+    font-size: 16px;
+    font-family: tahoma,arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+}
+
+.zt p span{
+    font-size: 18px;
+    color: red;
+}
+
+.head{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.but{
+    height: 60px;
+}
+
+.f13{
+    float: right;
+    overflow: hidden;
+    position: relative;
+    margin: 12px 10px 0 0;
+    width: 178px;
+    background-color: #ffeded;
+    font-family: 'Microsoft Yahei';
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.but .but1{
+    background-color: #ffeded;
+    border: 1px solid #FF0036;
+    color: #FF0036;
+}
+
+.but .but2{
+    background-color: #ff0036;
+    border: 1px solid #ff0036;
+    color: #fff;
+}
+
+
+/*以下为宝贝参数区域*/
+.f2{
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.f21 p{
+    font-family: "Helvetica Neue",Helvetica,STHeiTi,"Microsoft YaHei",sans-serif;
+}
+
+.f22{
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.details span{
+    display: inline;
+    font-size: 18px;
+    width: 206px;
+    height: 24px;
+    overflow: hidden;
+    text-indent: 5px;
+    line-height: 38px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

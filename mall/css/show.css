@@ -1,0 +1,83 @@
+.view{
+    overflow:hidden;
+    width: 80%;
+    margin: 10px auto;
+    border:1px solid white;
+}
+
+.hv{
+    margin: 10px 8px;
+    padding: 5px;
+    float: left;
+    width: 278px;
+    height: 330px;
+}
+
+.mi{
+    width: 276px;
+    height: 328px;
+    background:white;
+    border:1px solid gray;
+}
+
+.border{
+    margin: 5px;
+    width: 264px;
+    hight: 316px;
+}
+
+.hv:hover{
+    background-color: red;
+}
+
+
+.goods .imges{
+    width: 264px;
+    height: 210px;
+    border-bottom: 1px solid black;
+}
+
+.goods .imges img{
+    width: 264px;
+    height: 192px;
+}
+
+.product{
+    padding: 14px;
+}
+
+.product>em{
+    font-family:arial,verdana,sans-serif!important;
+    color:#ff0036;
+    font-size:20px;
+    height:30px;
+    line-height:30px;
+    margin:0 0 5px;
+    letter-spacing:normal;
+    overflow:inherit!important;
+    white-space:nowrap;
+}
+
+.productTitle{
+    display:block;
+    color:#666;
+    height:34px!important;
+    max-height:26px;
+    line-height:12px;
+    margin-bottom:3px;
+    margin-top: 8px;
+    word-break:break-all;
+    font-size:14px;
+    position:relative;
+}
+
+.productStatus span{
+    float:left;
+    display:inline-block;
+    border-right:1px solid #eee;
+    width:30%;
+    margin-right:6px;
+    line-height:12px;
+    font-size:16px;
+    white-space:nowrap;
+}

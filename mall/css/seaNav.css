@@ -1,0 +1,63 @@
+@charset "utf-8";
+/*网站头部和底部CSS*/
+
+/*全局定义*/
+*{ padding:0; margin:0;}
+fieldset,img{ border:0;}
+address,caption,cite,code,dfn,em,th,var,i{ font-weight:normal; font-style:normal;}
+ol,ul,li{ list-style:none;}
+div,dl,dt,dd,ol,ul,li{ zoom:1;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal; font-size:16px;}
+
+/*公共样式*/
+html{ width:100%; height:100%;}
+body{ width:100%; color:#333;font:24px/32px "Microsoft Yahei"; background-color:white;}
+a{color:#333;text-decoration:none; outline:none;}
+a:hover{color:#784441;}
+
+/*导航栏*/
+#nav{
+    height: 44px;
+    line-height: 44px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #d5d9e9bd;
+    font-size: 16px;
+}
+
+
+/*设置浮动*/
+.nav_left{
+    margin-left: 30px;
+    float: left;
+}
+
+.nav_right{
+    margin-right: 30px;
+    float: right;
+}
+
+.searchBox{
+    height: 80px;
+    width: 80%;      /* 搜索栏div*/
+    margin: 0 auto;
+    background-color: #7CCD7C;
+}
+
+#searchKey{
+    height: 50px;
+    width: 50%;    /*输入`                框*/
+    font-size: 24px;
+    padding-left:4px;
+    margin-left: 280px;
+    margin-top: 16px;
+}
+
+#searchBtn{
+    height: 55px;
+    width: 70px;
+    margin-left:-8px;
+    font-size: 18px;
+}
+
+
