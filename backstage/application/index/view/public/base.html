@@ -1,16 +1,24 @@
 {include file="public/meta" /}
 
-{block name="seo"}
+{block name='seo'}
 网站标题关键字与描述
 {/block}
 
-{include file="public/header" /}
+</head>
+<body>
 
+{block name="header"}
+{include file="public/header" /}
+{/block}
+
+{block name="menu"}
 {include file="public/menu" /}
+{/block}
 
 {block name="content"}
 
 {/block}
+
 {include file="public/footer" /}
 
 {block name="js"}

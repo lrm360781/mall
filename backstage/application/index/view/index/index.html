@@ -1,8 +1,7 @@
 ﻿{extend name="public/base" /}
 
-
-{block name="seo"}
-<title>{$title|default='商城后台管理'}</title>
+{block name='seo'}
+<title>商城后台管理</title>
 <meta name="keywords" content="{$keywords|default='页面关键字'}">
 <meta name="description" content="{$desc|default='页面描述'}">
 </head>
@@ -69,8 +68,3 @@
 </div>
 </section>
 {/block}
-
-
-{block name="js"}{/block}
-</body>
-</html>

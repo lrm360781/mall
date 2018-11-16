@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:92:"C:\myphp_www\PHPTutorial\WWW\backstage\public/../application/index\view\user\admin_list.html";i:1541776248;s:78:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\base.html";i:1541127410;s:78:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\meta.html";i:1541167367;s:80:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\header.html";i:1541417455;s:78:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\menu.html";i:1541723382;s:80:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\footer.html";i:1541130565;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:92:"C:\myphp_www\PHPTutorial\WWW\backstage\public/../application/index\view\user\admin_list.html";i:1542200210;s:78:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\base.html";i:1542023307;s:78:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\meta.html";i:1542024079;s:80:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\header.html";i:1542022992;s:78:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\menu.html";i:1541723382;s:80:"C:\myphp_www\PHPTutorial\WWW\backstage\application\index\view\public\footer.html";i:1541130565;}*/ ?>
 <!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <!--/meta 作为公共模版分离出去--}
+    <!--/meta 作为公共模版分离出去-->
 
 
 <title><?php echo (isset($title) && ($title !== '')?$title:'标题'); ?></title>
@@ -31,11 +31,14 @@
 <meta name="description" content="<?php echo (isset($desc) && ($desc !== '')?$desc:'描述'); ?>">
 
 
+</head>
+<body>
+
+
 <!--_header 作为公共模版分离出去-->
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
-        <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">H-ui.admin</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
-            <span class="logo navbar-slogan f-l mr-10 hidden-xs">v3.0</span>
+        <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="<?php echo url('index/index'); ?>">首页</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a>
             <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
             <nav class="nav navbar-nav">
                 <ul class="cl">
@@ -51,7 +54,15 @@
             </nav>
             <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
                 <ul class="cl">
-                    <li>超级管理员</li>
+                    <li>
+                        <?php if(\think\Session::get('user_info.name') == 'admin'): ?>
+                        超级管理员
+                        <?php else: if(\think\Session::get('user_info.role') == '1'): ?>
+                        超级管理员
+                        <?php else: ?>
+                        管理员
+                        <?php endif; endif; ?>
+                    </li>
                     <li class="dropDown dropDown_hover"> <a href="#" class="dropDown_A"><?php echo session('user_info.name'); ?> <i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="<?php echo url('user/logout'); ?>">退出</a></li>
@@ -73,6 +84,8 @@
     </div>
 </header>
 <!--/_header 作为公共模版分离出去-->
+
+
 
 <!--_menu 作为公共模版分离出去-->
 <aside class="Hui-aside">
@@ -167,6 +180,7 @@
 <!--/_menu 作为公共模版分离出去-->
 
 
+
 <section class="Hui-article-box">
 	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
 		<span class="c-gray en">&gt;</span>
@@ -194,9 +208,10 @@
 					<th scope="col" colspan="9">信息列表</th>
 				</tr>
 				<tr class="text-c">
-					<th width="40">ID</th>
-					<th width="100">用户名</th>
-					<th width="150">邮箱</th>
+					<th width="20">ID</th>
+					<th width="60">用户名</th>
+					<th width="130">邮箱</th>
+					<th width="130">联系电话</th>
 					<th width="100">角色</th>
 					<th width="50">登陆次数</th>
 					<th width="130">上次登陆时间</th>
@@ -211,6 +226,7 @@
 					<td><?php echo $vo['id']; ?></td>
 					<td><?php echo $vo['name']; ?></td>
 					<td><?php echo $vo['email']; ?></td>
+					<td><?php echo $vo['tel']; ?></td>
 					<td><?php echo $vo['role']; ?></td>
 					<td><?php echo $vo['login_count']; ?></td>
 					<td><?php echo $vo['login_time']; ?></td>
@@ -234,7 +250,6 @@
 						</a>
 						<?php endif; endif; ?>
 
-
 						<a title="编辑" href="javascript:;" onclick="admin_edit('管理员编辑','<?php echo url("user/adminEdit",["id"=>$vo["id"]]); ?>','1','800','500')" class="ml-5" style="text-decoration:none">
 						<i class="Hui-iconfont">&#xe6df;</i>
 						</a>
@@ -246,7 +261,6 @@
 						</a>
 						<?php endif; ?>
 
-
 					</td>
 				</tr>
 				<?php endforeach; endif; else: echo "" ;endif; ?>
@@ -256,6 +270,7 @@
 		</article>
 	</div>
 </section>
+
 
 <!--_footer 作为公共模版分离出去-->
 
@@ -338,8 +353,6 @@
             window.location.reload(); //重新加载页面,显示所有数据
         });
     }
-
-
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 

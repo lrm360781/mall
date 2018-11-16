@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"C:\myphp_www\PHPTutorial\WWW\backstage\public/../application/index\view\user\login.html";i:1541771552;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"C:\myphp_www\PHPTutorial\WWW\backstage\public/../application/index\view\user\login.html";i:1542200584;}*/ ?>
 ﻿<!DOCTYPE html>
 <html>
 <head>
@@ -79,7 +79,7 @@
                 data: $('form').serialize(),
                 dataType: 'json',
                 success:function(data){
-                    console.log(data.status1);
+                    console.log(data.status);
                     if (data.status == 1) {
                         alert(data.message);
                         window.location.href="<?php echo url('index/index'); ?>";

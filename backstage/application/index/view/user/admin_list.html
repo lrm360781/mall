@@ -1,13 +1,12 @@
 {extend name='public/base' /}
 
-{block name='seo' /}
+{block name='seo'}
 <title>{$title|default='标题'}</title>
 <meta name="keywords" content="{$keywords|default='关键字'}">
 <meta name="description" content="{$desc|default='描述'}">
 {/block}
 
-
-{block name='content' /}
+{block name='content'}
 <section class="Hui-article-box">
 	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
 		<span class="c-gray en">&gt;</span>
@@ -35,9 +34,10 @@
 					<th scope="col" colspan="9">信息列表</th>
 				</tr>
 				<tr class="text-c">
-					<th width="40">ID</th>
-					<th width="100">用户名</th>
-					<th width="150">邮箱</th>
+					<th width="20">ID</th>
+					<th width="60">用户名</th>
+					<th width="130">邮箱</th>
+					<th width="130">联系电话</th>
 					<th width="100">角色</th>
 					<th width="50">登陆次数</th>
 					<th width="130">上次登陆时间</th>
@@ -52,6 +52,7 @@
 					<td>{$vo.id}</td>
 					<td>{$vo.name}</td>
 					<td>{$vo.email}</td>
+					<td>{$vo.tel}</td>
 					<td>{$vo.role}</td>
 					<td>{$vo.login_count}</td>
 					<td>{$vo.login_time}</td>
@@ -77,7 +78,6 @@
 						{/if}
 						{/eq}
 
-
 						<a title="编辑" href="javascript:;" onclick="admin_edit('管理员编辑','{:url("user/adminEdit",["id"=>$vo["id"]])}','1','800','500')" class="ml-5" style="text-decoration:none">
 						<i class="Hui-iconfont">&#xe6df;</i>
 						</a>
@@ -88,7 +88,6 @@
 							<i class="Hui-iconfont">&#xe6e2;</i>
 						</a>
 						{/eq}
-
 
 					</td>
 				</tr>
@@ -174,8 +173,6 @@
             window.location.reload(); //重新加载页面,显示所有数据
         });
     }
-
-
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 {/block}
